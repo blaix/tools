@@ -15,7 +15,7 @@ nix run github:blaix/tools#worktree -- my-worktree
 IF you want access to them all easily, install the `github:blaix/tools` flake
 which puts `blix` on your PATH so you can run any of the tools by name, passing
 any arguments through.
-For example:
+For example, the command above would become:
 
 ```
 blix worktree my-worktree
