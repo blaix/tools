@@ -1,8 +1,8 @@
 { pkgs }:
 
-# Serve the current directory over HTTP on the first free port in 8100-8199.
 pkgs.writeShellApplication {
   name = "serve-static";
+  meta.description = "Serve the current directory over HTTP on the first free port in 8100-8199";
   runtimeInputs = [ pkgs.python3 ];
   text = ''
     port=8100

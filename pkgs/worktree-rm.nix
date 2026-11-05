@@ -1,8 +1,8 @@
 { pkgs }:
 
-# Remove a worktree made by the `worktree` package, keeping its branch.
 pkgs.writeShellApplication {
   name = "worktree-rm";
+  meta.description = "Remove a worktree made by `worktree`, keeping its branch";
   runtimeInputs = with pkgs; [ git gnused coreutils ];
   text = ''
     if [ $# -ne 1 ]; then

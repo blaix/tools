@@ -1,10 +1,11 @@
 { pkgs }:
 
-# Make a branch and check it out in a worktree beside the main checkout, in
-# ../<repo>.worktrees/<branch>, so every project's worktrees live in the same
-# predictable place. Aligns with the `worktree-rm` package for removing them.
+# Worktrees go in ../<repo>.worktrees/<branch>, so every project's worktrees
+# live in the same predictable place. Aligns with the `worktree-rm` package for
+# removing them.
 pkgs.writeShellApplication {
   name = "worktree";
+  meta.description = "Make a branch and check it out in a worktree beside the main checkout";
   runtimeInputs = with pkgs; [ git gnused ];
   text = ''
     if [ $# -lt 1 ] || [ $# -gt 2 ]; then
